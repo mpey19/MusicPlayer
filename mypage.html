@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+
+<html>
+<header>
+	
+	<title> Mood Music </title>
+
+</header>
+
+<style>
+body{
+	background-color:#ADD8E6 ;
+}
+</style>
+
+<style>
+.button{
+    background-color: #FDF2E9;
+    border: none;
+    color: black;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px;
+    font-size: 30px;
+    margin: 4px 2px;
+    cursor: pointer;
+     box-shadow: 0 9px #999;
+}
+.button:hover {background-color: #FDF2E9}
+
+.button:active {
+  background-color: .button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+};
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+</style>
+
+<body> 
+	<h1 align='center' style="font-family:verdana;font-size:50px;"> Mood Music Player!</h1>
+	<center style="font-family:verdana;font-size:36px;" > Do you wanna get hyped or calm down? </center>
+
+<script>
+function play(element) {
+	var allAudios = document.querySelectorAll('audio');
+	allAudios.forEach(function(audio){
+		audio.pause();
+	});
+
+	if (element){
+      var audio = document.getElementById(element);
+      audio.play();
+    }
+}
+
+
+</script>
+<center>
+<input class="button" value="Calm down~"  onclick="play('audio1')" style="font-family:verdana;height:100px;width:300px">
+<audio id="audio1" src="Oh Wonder - White Blood.mp3" ></audio>
+</center>
+<br/><br/>
+<center>
+<input class="button" value="HYPE!"  onclick="play('audio2')" style="font-family:verdana;height:100px;width:300px">
+<audio id="audio2" src="C2C - Happy Ft. D.Martin (Lyrics).mp3" ></audio>
+</center>
+<br/><br/>
+<center>
+<input class="button" value="Turn off music"  onclick="play()" style="font-family:verdana;height:100px;width:300px">
+</center>
+
+</body>
+</html>
